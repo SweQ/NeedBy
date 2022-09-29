@@ -34,7 +34,7 @@ class ProductGroupsCreatorPresenter: GroupsCreatorPresenterProtocol  {
         let product = productsInBasket[index.row]
         guard let name = product.product?.name,
               let measure = product.product?.measure else { return "-"}
-        return "\(name) count: \(product.count) \(measure) cost: \(product.getCost().shortString())"
+        return "\(name) \(Words.countTitle.value()): \(product.count) \(measure) \(Words.costTitle.value()): \(product.getCost().shortString())"
 
     }
     
@@ -70,10 +70,11 @@ class ProductGroupsCreatorPresenter: GroupsCreatorPresenterProtocol  {
         alert.addTextField { nameTF in
             nameTF.text = defaultValue
         }
-        let okAction = UIAlertAction(title: "Ok", style: .default) { [weak self] _ in
+        let okAction = UIAlertAction(title: Words.okTitle.value(), style: .default) { [weak self] _ in
             guard let groupName = alert.textFields?.first?.text else { return }
             guard self?.isUniqueGroupName(groupName: groupName) ?? false else {
-                self?.showAlertForName(title: "Group with name \'\(groupName)\' already created.", defaultValue: groupName)
+                
+                self?.showAlertForName(title: "\(Words.groupWithName.value()) \'\(groupName)\' \(Words.alreadyCreated.value()).", defaultValue: groupName)
                 return
             }
             if self?.productGroup == nil {
@@ -82,7 +83,7 @@ class ProductGroupsCreatorPresenter: GroupsCreatorPresenterProtocol  {
                 self?.productGroup?.name = groupName
             }
             
-            self?.view?.changeTitle(title: "Creating \(groupName)")
+            self?.view?.changeTitle(title: "\(Words.creatingTitle.value()) \(groupName)")
         }
         alert.addAction(okAction)
         

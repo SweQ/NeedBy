@@ -58,7 +58,7 @@ class PurchaseTableViewCell: UITableViewCell {
     }
     
     func config(purchase: Purchase) {
-        dateLabel.text = "Planning date: \(purchase.getStringDate())"
+        dateLabel.text = "\(Words.planingDateTitle.value()): \(purchase.getStringDate())"
         titleLabel.text = purchase.getTitle()
     }
     

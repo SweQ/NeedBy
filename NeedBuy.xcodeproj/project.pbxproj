@@ -74,6 +74,8 @@
 		728D7D8F28CF0B9200294E28 /* Purchase+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728D7D8B28CF0B9200294E28 /* Purchase+CoreDataProperties.swift */; };
 		72B4E23A28DDAE8B0007B306 /* UITextField +keyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E23928DDAE8B0007B306 /* UITextField +keyboardToolbar.swift */; };
 		72B4E23C28E1E7CB0007B306 /* UIImage+fixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E23B28E1E7CB0007B306 /* UIImage+fixOrientation.swift */; };
+		72B4E25A28E5CDE60007B306 /* AppWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E25928E5CDE60007B306 /* AppWords.swift */; };
+		72B4E25C28E5CE220007B306 /* String + localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E25B28E5CE220007B306 /* String + localize.swift */; };
 		72BE5A1328D8849600E8BCCF /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE5A1228D8849600E8BCCF /* RoundImageView.swift */; };
 		72BE5A1728D8EE6500E8BCCF /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE5A1628D8EE6500E8BCCF /* GroupTableViewCell.swift */; };
 		72BE5A1928D8FA2800E8BCCF /* ProductGroupsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BE5A1828D8FA2800E8BCCF /* ProductGroupsPresenterProtocol.swift */; };
@@ -87,6 +89,7 @@
 		72D7783028D3B87F00B6126B /* String + toDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7782F28D3B87F00B6126B /* String + toDouble.swift */; };
 		72D7783228D443F800B6126B /* GroupsCreatorPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7783128D443F800B6126B /* GroupsCreatorPresenterProtocol.swift */; };
 		72D7783428D4446000B6126B /* GroupsCreatorViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7783328D4446000B6126B /* GroupsCreatorViewControllerProtocol.swift */; };
+		72E5CF2328E61C2C00B3CA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72E5CF2528E61C2C00B3CA75 /* Localizable.strings */; };
 		72EA54312887F4CA00D76464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EA54302887F4CA00D76464 /* AppDelegate.swift */; };
 		72EA54332887F4CA00D76464 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EA54322887F4CA00D76464 /* SceneDelegate.swift */; };
 		72EA543A2887F4CB00D76464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72EA54392887F4CB00D76464 /* Assets.xcassets */; };
@@ -179,6 +182,8 @@
 		728D7D8B28CF0B9200294E28 /* Purchase+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Purchase+CoreDataProperties.swift"; path = "../../../../Purchase+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		72B4E23928DDAE8B0007B306 /* UITextField +keyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField +keyboardToolbar.swift"; sourceTree = "<group>"; };
 		72B4E23B28E1E7CB0007B306 /* UIImage+fixOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+fixOrientation.swift"; sourceTree = "<group>"; };
+		72B4E25928E5CDE60007B306 /* AppWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWords.swift; sourceTree = "<group>"; };
+		72B4E25B28E5CE220007B306 /* String + localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + localize.swift"; sourceTree = "<group>"; };
 		72BE5A1228D8849600E8BCCF /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		72BE5A1628D8EE6500E8BCCF /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		72BE5A1828D8FA2800E8BCCF /* ProductGroupsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGroupsPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -192,6 +197,8 @@
 		72D7782F28D3B87F00B6126B /* String + toDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + toDouble.swift"; sourceTree = "<group>"; };
 		72D7783128D443F800B6126B /* GroupsCreatorPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCreatorPresenterProtocol.swift; sourceTree = "<group>"; };
 		72D7783328D4446000B6126B /* GroupsCreatorViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCreatorViewControllerProtocol.swift; sourceTree = "<group>"; };
+		72E5CF2428E61C2C00B3CA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		72E5CF2628E61C3900B3CA75 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		72EA542D2887F4CA00D76464 /* NeedBuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeedBuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EA54302887F4CA00D76464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72EA54322887F4CA00D76464 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -652,6 +659,91 @@
 			path = ProductsGroup;
 			sourceTree = "<group>";
 		};
+		72B4E24D28E5CC3A0007B306 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				72EA5460288892BB00D76464 /* UITextField+indent.swift */,
+				72B4E23928DDAE8B0007B306 /* UITextField +keyboardToolbar.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		72B4E24E28E5CC5E0007B306 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				72D7781728D2F11700B6126B /* UILabel+fonts.swift */,
+				72D7781928D30C3D00B6126B /* UILabel+sizes.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		72B4E24F28E5CC6E0007B306 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7250DBDC28CF20CD00C1430B /* UIView+setupTotalConstraints.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		72B4E25028E5CC7E0007B306 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				72EA54622889551E00D76464 /* UIViewController+setupRightBarButtonItem.swift */,
+				7250DBF828D268B000C1430B /* UIViewController+setupTitle.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		72B4E25128E5CC8C0007B306 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				728D7D8428CE686600294E28 /* String + isDouble.swift */,
+				72D7782F28D3B87F00B6126B /* String + toDouble.swift */,
+				72B4E25B28E5CE220007B306 /* String + localize.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		72B4E25228E5CCA00007B306 /* Double */ = {
+			isa = PBXGroup;
+			children = (
+				728D7D7928CA72FB00294E28 /* Double+shortString.swift */,
+			);
+			path = Double;
+			sourceTree = "<group>";
+		};
+		72B4E25328E5CCAA0007B306 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				72B4E23B28E1E7CB0007B306 /* UIImage+fixOrientation.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		72B4E25428E5CCB20007B306 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				72EA546A2889A1E700D76464 /* UIButton+setupStyleForPurchaseView.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		72B4E25528E5CCBA0007B306 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				728D7D6E28C9FB2900294E28 /* Date+shortStringDate.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		72B4E25628E5CCC00007B306 /* UIAlert */ = {
+			isa = PBXGroup;
+			children = (
+				72D7781D28D3ADEC00B6126B /* UIAlertAction+titleColor.swift */,
+			);
+			path = UIAlert;
+			sourceTree = "<group>";
+		};
 		72EA54242887F4CA00D76464 = {
 			isa = PBXGroup;
 			children = (
@@ -677,9 +769,11 @@
 				72EA54492887F4FE00D76464 /* CoreData */,
 				72EA54302887F4CA00D76464 /* AppDelegate.swift */,
 				72EA54322887F4CA00D76464 /* SceneDelegate.swift */,
+				72E5CF2528E61C2C00B3CA75 /* Localizable.strings */,
 				72EA54392887F4CB00D76464 /* Assets.xcassets */,
 				72EA543B2887F4CB00D76464 /* LaunchScreen.storyboard */,
 				72EA543E2887F4CB00D76464 /* Info.plist */,
+				72B4E25928E5CDE60007B306 /* AppWords.swift */,
 			);
 			path = NeedBuy;
 			sourceTree = "<group>";
@@ -753,20 +847,16 @@
 		72EA545F288892A400D76464 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				72EA5460288892BB00D76464 /* UITextField+indent.swift */,
-				72EA54622889551E00D76464 /* UIViewController+setupRightBarButtonItem.swift */,
-				72EA546A2889A1E700D76464 /* UIButton+setupStyleForPurchaseView.swift */,
-				728D7D6E28C9FB2900294E28 /* Date+shortStringDate.swift */,
-				728D7D7928CA72FB00294E28 /* Double+shortString.swift */,
-				728D7D8428CE686600294E28 /* String + isDouble.swift */,
-				7250DBDC28CF20CD00C1430B /* UIView+setupTotalConstraints.swift */,
-				7250DBF828D268B000C1430B /* UIViewController+setupTitle.swift */,
-				72D7781728D2F11700B6126B /* UILabel+fonts.swift */,
-				72D7781928D30C3D00B6126B /* UILabel+sizes.swift */,
-				72D7781D28D3ADEC00B6126B /* UIAlertAction+titleColor.swift */,
-				72D7782F28D3B87F00B6126B /* String + toDouble.swift */,
-				72B4E23928DDAE8B0007B306 /* UITextField +keyboardToolbar.swift */,
-				72B4E23B28E1E7CB0007B306 /* UIImage+fixOrientation.swift */,
+				72B4E25628E5CCC00007B306 /* UIAlert */,
+				72B4E25528E5CCBA0007B306 /* Date */,
+				72B4E25428E5CCB20007B306 /* UIButton */,
+				72B4E25328E5CCAA0007B306 /* UIImage */,
+				72B4E25228E5CCA00007B306 /* Double */,
+				72B4E25128E5CC8C0007B306 /* String */,
+				72B4E25028E5CC7E0007B306 /* UIViewController */,
+				72B4E24F28E5CC6E0007B306 /* UIView */,
+				72B4E24E28E5CC5E0007B306 /* UILabel */,
+				72B4E24D28E5CC3A0007B306 /* UITextField */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -837,6 +927,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 72EA54242887F4CA00D76464;
 			productRefGroup = 72EA542E2887F4CA00D76464 /* Products */;
@@ -854,6 +945,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72EA543D2887F4CB00D76464 /* LaunchScreen.storyboard in Resources */,
+				72E5CF2328E61C2C00B3CA75 /* Localizable.strings in Resources */,
 				72EA543A2887F4CB00D76464 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -865,6 +957,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B4E25A28E5CDE60007B306 /* AppWords.swift in Sources */,
 				72144BD828C6703600349182 /* PurchaseCreatorViewProtocol.swift in Sources */,
 				72EA54482887F4E900D76464 /* NeedBuy.xcdatamodeld in Sources */,
 				728D7D8F28CF0B9200294E28 /* Purchase+CoreDataProperties.swift in Sources */,
@@ -905,6 +998,7 @@
 				728D7D6D28C9FAF900294E28 /* Check+CoreDataProperties.swift in Sources */,
 				7250DBE528CF4CF400C1430B /* ProductGroupsCreatorView.swift in Sources */,
 				72EA54632889551E00D76464 /* UIViewController+setupRightBarButtonItem.swift in Sources */,
+				72B4E25C28E5CE220007B306 /* String + localize.swift in Sources */,
 				72BE5A1D28D9FCC300E8BCCF /* NotificationsCenter.swift in Sources */,
 				72EA546B2889A1E700D76464 /* UIButton+setupStyleForPurchaseView.swift in Sources */,
 				724F02D928DC2B28007E4872 /* PhotoPicker.swift in Sources */,
@@ -971,6 +1065,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		72E5CF2528E61C2C00B3CA75 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72E5CF2428E61C2C00B3CA75 /* en */,
+				72E5CF2628E61C3900B3CA75 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		72EA543B2887F4CB00D76464 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -986,6 +1089,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1047,6 +1151,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

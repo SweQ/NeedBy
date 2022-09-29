@@ -33,7 +33,7 @@ class ProductInBasketViewCell: UITableViewCell {
               let measure = productInBasket.product?.measure
         else { return }
         nameLabel.text = name
-        costLabel.text = "price: \(productInBasket.getCost().shortString())"
+        costLabel.text = "\(Words.priceTitle.value()): \(productInBasket.getCost().shortString())"
         countLabel.text = "\(productInBasket.count.shortString()) \(measure)"
     }
     

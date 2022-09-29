@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  NeedBuy
+
+  Created by alexKoro on 29.09.22.
+  
+*/
+
+"mainViewTitle" = "Planning purchases";
+"doneTitle" = "Done";
+"deleteTitle" = "Delete";
+"planingDateTitle" = "Planning date";
+"productsTitle" = "Products";
+"checksTitle" = "Checks";
+"productGroupsTitle" = "Product groups";
+"menuTitle" = "Menu";
+"enterGroupNameTitle" = "Enter group name.";
+"newGroupTitle" = "New group";
+"productGroupCreatorTitle" = "Product group creator.";
+"addComponentTitle" = "Add component";
+"saveTitle" = "Save";
+"countTitle" = "Count";
+"costTitle" = "Cost";
+"okTitle" = "Ok";
+"groupWithName" = "Group with name";
+"alreadyCreated" = "already created";
+"creatingTitle" = "Creating";
+"buyTitle" = "Buy";
+"priceTitle" = "Price";
+"totalPriceTitle" = "Total price";
+"editTitle" = "Edit";
+"selectActionFor" = "Select action for";
+"enterCount" = "Enter count";
+"sourceTitle" = "Source";
+"per1" = "per 1";
+"unableToDelete" = "Unable to delete!";
+"purchasesTitle" = "Purchases";
+"groupsTitle" = "Groups";
+"thisProductContainsIn" = "This product contains in";
+"countOfProduct" = "Count of product";
+"enterCountOfProduct" = "Enter count of product";
+"addTitle" = "Add";
+"errorTitle" = "Error";
+"costIsNotCorrect" = "Cost is not correct";
+"exampleTitle" = "Example";
+"selectMeasure" = "Select measure";
+"changeImage" = "Change image";
+"nameTitle" = "Name";
+"defaultWord" = "default";
+"measureTitle" = "Measure";
+"pcs" = "pcs";
+"productMustHaveName" = "Product must have a name";
+"thisNameIsAlreadyUse" = "This name is already use";
+"createNewProduct" = "Create new product";
+"creatingNewPurchase" = "Creating new purchase";
+"errorEmptyBasket" = "Basket have 0 products.\nPlease, add products into basket.";
+"addProduct" = "Add product";
+"backTitle" = "Back";
+"nextTitle" = "Next";
+"createTitle" = "Create";
+"purchaseName" = "Purchase name";
+"enterPurchaseName" = "Enter purchase name";
+"purchaseMustHasName" = "Purchase must has name";
+"titleIsExists" = "This title already exists";
+"cancelTitle" = "Cancel";
+"todayYouHavePurchases" = "Today you have purchases";

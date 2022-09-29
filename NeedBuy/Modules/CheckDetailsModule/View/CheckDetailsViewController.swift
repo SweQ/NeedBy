@@ -47,6 +47,7 @@ class CheckDetailsViewController: UIViewController {
 
 }
 
+//MARK: -UITableViewDelegate and DataSource
 extension CheckDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -99,6 +100,7 @@ extension CheckDetailsViewController: UITableViewDelegate, UITableViewDataSource
     }
 }
 
+//MARK: -CheckDetailsControllerProtocol
 extension CheckDetailsViewController: CheckDetailsControllerProtocol {
     
 }

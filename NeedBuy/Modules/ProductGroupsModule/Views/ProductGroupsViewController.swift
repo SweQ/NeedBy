@@ -22,7 +22,7 @@ class ProductGroupsViewController: UIViewController {
     }
     
     private func setupTitle() {
-        setupTitle(title: "Product groups")
+        setupTitle(title: Words.productGroupsTitle.value())
     }
     
     private func setupAddButton() {
@@ -71,7 +71,7 @@ extension ProductGroupsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {[weak self] _, _, _ in
+        let deleteAction = UIContextualAction(style: .destructive, title: Words.deleteTitle.value()) {[weak self] _, _, _ in
             self?.presenter?.removeGroup(with: indexPath)
         }
         let config = UISwipeActionsConfiguration(actions: [deleteAction])

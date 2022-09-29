@@ -29,7 +29,7 @@ class PurchaseCreatorViewController: UIViewController {
     
     private func setup() {
         view.backgroundColor = .white
-        setupTitle(title: "Creating new purchase.")
+        setupTitle(title: Words.creatingNewPurchase.value())
         setupPurchaseCreatorView()
         
         stepViews = [
@@ -46,8 +46,8 @@ class PurchaseCreatorViewController: UIViewController {
     
     private func showErrorZeroProductsAlert() {
         let alert = AlertCreator.shared.createErrorAlert(
-            with: "Warning",
-            message: "Basket have 0 products.\nPlease, add products into basket."
+            with: Words.errorTitle.value(),
+            message: Words.errorEmptyBasket.value()
         )
         present(alert, animated: true)
     }
@@ -112,7 +112,8 @@ extension PurchaseCreatorViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+        let deleteAction = UIContextualAction(style: .destructive,
+                                              title: Words.deleteTitle.value()) {
             [weak self] _, _, _ in
             self?.presenter?.removeProductFromBasket(at: indexPath)
         }

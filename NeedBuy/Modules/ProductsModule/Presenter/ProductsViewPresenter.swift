@@ -11,7 +11,6 @@ import UIKit
 class ProductsViewPresenter: NSObject, ProductsViewPresenterProtocol {
 
     var fetchController: NSFetchedResultsController<Product>!
-    
     var coreDataManager = CoreDataManager.share
     var selectProductToBasketHandler: ((ProductInBasket) -> ())?
     
@@ -48,7 +47,7 @@ class ProductsViewPresenter: NSObject, ProductsViewPresenterProtocol {
                 groups: groupsWithProduct
             )
             let errorAlert = AlertCreator.shared.createErrorAlert(
-                with: "Unable to delete!",
+                with: Words.unableToDelete.value(),
                 message: errorString
             )
             view?.showAlertController(alert: errorAlert)
@@ -56,8 +55,8 @@ class ProductsViewPresenter: NSObject, ProductsViewPresenterProtocol {
     }
     
     private func createErrorMessage(with purchases: [Purchase], groups: [ProductsGroup]) -> String {
-        var listOfPurchases = "Purchases: "
-        var listOfGroups = "Groups: "
+        var listOfPurchases = "\(Words.purchasesTitle.value()): "
+        var listOfGroups = "\(Words.groupsTitle.value()): "
         
         purchases.forEach { purchase in
             if let purchaseTitle = purchase.title {
@@ -74,7 +73,7 @@ class ProductsViewPresenter: NSObject, ProductsViewPresenterProtocol {
         }
         listOfGroups.removeLast()
         
-         return "This product contains in:\n\(listOfPurchases)\n\(listOfGroups)"
+        return "\(Words.thisProductContainsIn.value()):\n\(listOfPurchases)\n\(listOfGroups)"
     }
     
     func getProduct(at index: IndexPath) -> Product {
@@ -95,20 +94,20 @@ class ProductsViewPresenter: NSObject, ProductsViewPresenterProtocol {
     private func createAlertForCount(of product: Product, handler: @escaping (Double)->()) -> UIAlertController {
         
         let countTextField = UITextField()
-        countTextField.placeholder = "Count..."
+        countTextField.placeholder = "\(Words.countTitle.value())..."
         
         let alertController = AlertCreator.shared.createAlertWithCancel(
-            title: "Count of product, \(product.measure ?? Measure.pcs.rawValue)",
+            title: "\(Words.countOfProduct.value()), \(product.measure ?? Measure.pcs.rawValue)",
             message: nil,
             style: .alert,
             actions: [])
         
         alertController.addTextField { textField in
-            textField.placeholder = "Enter count of product..."
+            textField.placeholder = "\(Words.enterCountOfProduct.value())..."
             textField.keyboardType = .decimalPad
         }
         
-        let okAction = UIAlertAction(title: "Add", style: .default) { _ in
+        let okAction = UIAlertAction(title: Words.addTitle.value(), style: .default) { _ in
             guard let countString = alertController.textFields?.first?.text,
                   let count = countString.toDouble() else {
                 return

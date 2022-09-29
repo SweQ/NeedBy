@@ -20,9 +20,11 @@ class ProductDetailsView: UIView {
         return measurePropertyView.valueTextField
     }
     
-    let namePropertyView = PropertyView(placeholder: "Name*", title: "Name")
-    let costPropertyView = PropertyView(placeholder: "Cost (default 0)", title: "Cost")
-    let measurePropertyView = PropertyView(placeholder: "Mesure (default pcs.)", title: "Measure")
+    let namePropertyView = PropertyView(placeholder: "\(Words.nameTitle.value())*", title: Words.nameTitle.value())
+    let costPropertyView = PropertyView(placeholder: "\(Words.costTitle.value()) (\(Words.defaultWord.value()) 0)",
+                                        title: Words.costTitle.value())
+    let measurePropertyView = PropertyView(placeholder: "\(Words.measureTitle.value()) (\(Words.defaultWord.value()) \(Words.pcs.value()).)",
+                                           title: Words.measureTitle.value())
     
     override init(frame: CGRect) {
         super.init(frame: frame)

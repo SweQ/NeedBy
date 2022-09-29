@@ -92,11 +92,9 @@ class ProductTableViewCell: UITableViewCell {
         let productMeasure = product.measure ?? Measure.pcs.rawValue
         productImageView.image = product.image
         nameLabel.text = productName
-        costLabel.text = "Price: \(productPrice) per 1 \(productMeasure)"
+        costLabel.text = "\(Words.priceTitle.value()): \(productPrice) \(Words.per1.value()) \(productMeasure)"
         
     }
-    
-    
     
     override func prepareForReuse() {
         super.prepareForReuse()

@@ -73,7 +73,7 @@ class ProductCreatorView: UIView {
     
     private func setupChangeImageButton() {
         productImageView.addSubview(changeImageButton)
-        changeImageButton.setTitle("Change image", for: .normal)
+        changeImageButton.setTitle(Words.changeImage.value(), for: .normal)
         changeImageButton.setTitleColor(.black, for: .normal)
         changeImageButton.titleLabel?.adjustsFontSizeToFitWidth = true
         changeImageButton.setTitleColor(.lightGray, for: .highlighted)

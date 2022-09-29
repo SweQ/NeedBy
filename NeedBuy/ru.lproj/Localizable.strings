@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  NeedBuy
+
+  Created by alexKoro on 29.09.22.
+  
+*/
+
+"mainViewTitle" = "Планируемые покупки";
+"doneTitle" = "Выполнено";
+"deleteTitle" = "Удалить";
+"planingDateTitle" = "Планируемая дата";
+"productsTitle" = "Продукты";
+"checksTitle" = "Чеки";
+"productGroupsTitle" = "Группы продуктов";
+"menuTitle" = "Меню";
+"enterGroupNameTitle" = "Введите имя группы";
+"newGroupTitle" = "Новая группа";
+"productGroupCreatorTitle" = "Создание новой группы";
+"addComponentTitle" = "Добавить компонент";
+"saveTitle" = "Сохранить";
+"countTitle" = "Число";
+"costTitle" = "Цена";
+"okTitle" = "Ок";
+"groupWithName" = "Группа с именем";
+"alreadyCreated" = "уже создана";
+"creatingTitle" = "Создание";
+"buyTitle" = "Купить";
+"priceTitle" = "Цена";
+"totalPriceTitle" = "Общая стоимость";
+"editTitle" = "Редактировать";
+"selectActionFor" = "Выберите действие для";
+"enterCount" = "Введите кол-во";
+"sourceTitle" = "Источник";
+"per1" = "за 1";
+"unableToDelete" = "Невозможно удалить!";
+"purchasesTitle" = "Покупки";
+"groupsTitle" = "Группы";
+"thisProductContainsIn" = "Этот продукт содержится в";
+"countOfProduct" = "Кол-во продукта";
+"enterCountOfProduct" = "Введите кол-во продукта";
+"addTitle" = "Добавить";
+"errorTitle" = "Ошибка";
+"costIsNotCorrect" = "Цена некорректна";
+"exampleTitle" = "Пример";
+"selectMeasure" = "Выберите ед.измерения";
+"changeImage" = "Изменить фото";
+"nameTitle" = "Наименование";
+"defaultWord" = "стандартно";
+"measureTitle" = "Измерение";
+"pcs" = "шт";
+"productMustHaveName" = "Продукт должен иметь наименование";
+"thisNameIsAlreadyUse" = "Это имя уже используется";
+"createNewProduct" = "Создать продукт";
+"creatingNewPurchase" = "Создать покупку";
+"errorEmptyBasket" = "В корзине 0 продуктов.\nПожалуйста, добавьте продукты";
+"addProduct" = "Добавить продукт";
+"backTitle" = "Назад";
+"nextTitle" = "Далее";
+"createTitle" = "Создать";
+"purchaseName" = "Наименование покупки";
+"enterPurchaseName" = "Введите наименование покупки";
+"purchaseMustHasName" = "Покупка должна иметь наименование";
+"titleIsExists" = "Это наименование уже используется";
+"cancelTitle" = "Отмена";
+"todayYouHavePurchases" = "Сегодня у вас есть покупки";

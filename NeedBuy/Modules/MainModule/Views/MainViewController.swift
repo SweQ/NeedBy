@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     }
     
     private func setupBar() {
-        setupTitle(title: "Planning purchases")
+        setupTitle(title: Words.mainViewTitle.value())
         setupBarItems()
     }
     
@@ -115,7 +115,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {[weak self] _, view, _ in
+        let deleteAction = UIContextualAction(style: .destructive, title: Words.deleteTitle.value()) {[weak self] _, view, _ in
             self?.presenter?.deletePurchase(at: indexPath)
         }
   
@@ -125,7 +125,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let doneAction = UIContextualAction(style: .normal, title: "Done") { [weak self] _, _, _ in
+        let doneAction = UIContextualAction(style: .normal, title: Words.doneTitle.value()) { [weak self] _, _, _ in
             self?.presenter?.makePurchase(at: indexPath)
         }
         doneAction.backgroundColor = .green

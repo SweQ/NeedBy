@@ -17,7 +17,8 @@ class ProductGroupsCreatorViewController: UIViewController {
         setupTitle()
         setupCreatorView()
         
-        presenter?.showAlertForName(title: "Enter group name.", defaultValue: "New group")
+        presenter?.showAlertForName(title: Words.enterGroupNameTitle.value(),
+                                    defaultValue: Words.newGroupTitle.value())
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -30,7 +31,7 @@ class ProductGroupsCreatorViewController: UIViewController {
     }
     
     private func setupTitle() {
-        title = "Product group creator."
+        title = Words.productGroupCreatorTitle.value()
         UILabel.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).adjustsFontSizeToFitWidth = true
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -62,6 +63,7 @@ class ProductGroupsCreatorViewController: UIViewController {
     
 }
 
+//MARK: -UITableViewDelegate and DataSource
 extension ProductGroupsCreatorViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.getCountOfProductsInGroup() ?? 0
@@ -75,10 +77,9 @@ extension ProductGroupsCreatorViewController: UITableViewDelegate, UITableViewDa
         
         return cell
     }
-    
-    
 }
 
+//MARK: -GroupsCreatorViewControllerProtocol
 extension ProductGroupsCreatorViewController: GroupsCreatorViewControllerProtocol {
     func presentAlert(alert: UIAlertController) {
         present(alert, animated: true)
@@ -89,10 +90,9 @@ extension ProductGroupsCreatorViewController: GroupsCreatorViewControllerProtoco
     }
 }
 
+//MARK: -BasketViewControllerProtocol
 extension ProductGroupsCreatorViewController: BasketViewControllerProtocol {
     func addProductInBasket(productInBasket: ProductInBasket) {
         presenter?.addProductInBasket(productInBasket: productInBasket, tableView: creatorView.tableView)
     }
-    
-    
 }

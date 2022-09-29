@@ -102,8 +102,8 @@ class ProductCreatorViewController: UIViewController {
         if stringData.isDouble() {
             return true
         } else {
-            showErrorAlert(with: "Error!",
-                           message: "Cost is not correct!\nExample: \"1.5\", \"1\"")
+            showErrorAlert(with: Words.errorTitle.value(),
+                           message: "\(Words.costIsNotCorrect.value())!\n\(Words.exampleTitle.value()): \"1.5\", \"1\"")
             return false
         }
     }
@@ -146,7 +146,7 @@ class ProductCreatorViewController: UIViewController {
         }
         
         let alert = AlertCreator.shared.createAlertWithCancel(
-            title: "Select measure",
+            title: Words.selectMeasure.value(),
             message: nil,
             style: .actionSheet,
             actions: actions

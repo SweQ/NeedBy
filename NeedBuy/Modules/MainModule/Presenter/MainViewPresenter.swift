@@ -12,6 +12,7 @@ import UIKit
 class MainViewPresenter: NSObject {
     
     var fetchController: NSFetchedResultsController<Purchase>!
+    
     private let coreManager = CoreDataManager.share
     private let coordinator = Coordinator.shared
     private let purchaseManager = PurchaseManager.share
@@ -34,15 +35,15 @@ class MainViewPresenter: NSObject {
     }
     
     private func createMenuAlert() -> UIAlertController {
-        let showProductsAction = UIAlertAction(title: "Products", style: .default) { [weak self] _ in
+        let showProductsAction = UIAlertAction(title: Words.productsTitle.value(), style: .default) { [weak self] _ in
             self?.openProductList()
         }
         
-        let showCheksAction = UIAlertAction(title: "Checks", style: .default) { [weak self] _ in
+        let showCheksAction = UIAlertAction(title: Words.checksTitle.value(), style: .default) { [weak self] _ in
             self?.openChecksList()
         }
         
-        let showProductGroups = UIAlertAction(title: "Product groups", style: .default) { [weak self] _ in
+        let showProductGroups = UIAlertAction(title: Words.productGroupsTitle.value(), style: .default) { [weak self] _ in
             self?.openProductGroupsList()
         }
         
@@ -51,7 +52,7 @@ class MainViewPresenter: NSObject {
         showProductGroups.setupTitleColor(.darkGray)
         
         let menuAlert = AlertCreator.shared.createAlertWithCancel(
-            title: "Menu",
+            title: Words.menuTitle.value(),
             message: nil,
             style: .actionSheet,
             actions: [showProductsAction, showProductGroups,showCheksAction]

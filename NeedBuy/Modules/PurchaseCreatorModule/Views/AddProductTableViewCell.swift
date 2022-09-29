@@ -21,7 +21,8 @@ class AddProductTableViewCell: UITableViewCell {
         //add button into contentView it's really important
         contentView.addSubview(addButton)
         
-        addButton.setupStyleForPurchaseView(with: "Add product", textColor: .white)
+        addButton.setupStyleForPurchaseView(with: Words.addProduct.value(),
+                                            textColor: .white)
         addButton.translatesAutoresizingMaskIntoConstraints = false
         setupAddButtonConstraints()
     }

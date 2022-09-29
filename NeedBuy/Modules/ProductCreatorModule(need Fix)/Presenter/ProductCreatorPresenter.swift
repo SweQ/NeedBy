@@ -32,14 +32,16 @@ class ProductCreatorPresenter: NSObject, ProductCreatorPresenterProtocol {
         
         guard !productName.isEmpty else {
             let errorAlert = AlertCreator.shared.createErrorAlert(
-                with: "Error",
-                message: "Product must have a name.")
+                with: Words.errorTitle.value(),
+                message: Words.productMustHaveName.value())
             view?.showAlert(alert: errorAlert)
             return
         }
         
         guard coreDateManager.isProductNameFree(name: productName) || productName == editingProduct?.name ?? ""  else {
-            let errorAlert = AlertCreator.shared.createErrorAlert(with: "Error!", message: "This name is already in use.")
+            let errorAlert = AlertCreator.shared.createErrorAlert(
+                with: Words.errorTitle.value(),
+                message: Words.thisNameIsAlreadyUse.value())
             view?.showAlert(alert: errorAlert)
             return
         }
@@ -95,7 +97,7 @@ class ProductCreatorPresenter: NSObject, ProductCreatorPresenterProtocol {
     }
     
     private func setupTitleView() {
-        let title = editingProduct == nil ? "Create new product" : editingProduct?.name ?? "-"
+        let title = editingProduct == nil ? Words.createNewProduct.value() : editingProduct?.name ?? "-"
         view?.setupTitle(title: title)
     }
 }

@@ -39,7 +39,7 @@ class GroupDetailsPresenter: GroupDetailsPresenterProtocol {
     }
     
     func getTitle() -> String {
-        return productGroup.name ?? "No group name"
+        return productGroup.name ?? "-"
     }
     
     func getComponentsCount() -> Int {

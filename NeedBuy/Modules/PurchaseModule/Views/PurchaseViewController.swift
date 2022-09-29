@@ -85,7 +85,7 @@ extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+        let deleteAction = UIContextualAction(style: .destructive, title: Words.deleteTitle.value()) {
             [weak self] _, _, _ in
             self?.presenter?.removeProductFromBasket(at: indexPath)
         }
@@ -95,7 +95,7 @@ extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let doneAction = UIContextualAction(style: .normal, title: "Buy") { [weak self] _, _, _ in
+        let doneAction = UIContextualAction(style: .normal, title: Words.buyTitle.value()) { [weak self] _, _, _ in
             self?.presenter?.purchaseProductButtonPressed(at: indexPath)
         }
         doneAction.backgroundColor = .green

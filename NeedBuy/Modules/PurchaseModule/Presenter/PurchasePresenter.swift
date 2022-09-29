@@ -38,21 +38,21 @@ class PurchasePresenter: NSObject {
     
     private func createMenuAlert(with indexPath: IndexPath) -> UIAlertController {
         let productInBasket = fetchController.object(at: indexPath)
-        let productName = productInBasket.product?.name ?? "no product name"
-        let buyAction = UIAlertAction(title: "Buy", style: .default) { [weak self] _ in
+        let productName = productInBasket.product?.name ?? "-"
+        let buyAction = UIAlertAction(title: Words.buyTitle.value(), style: .default) { [weak self] _ in
             self?.purchase(productInBasket: productInBasket)
         }
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+        let deleteAction = UIAlertAction(title: Words.deleteTitle.value(), style: .destructive) { [weak self] _ in
             self?.removeProductFromBasket(at: indexPath)
         }
-        let editCountAction = UIAlertAction(title: "Edit", style: .default) { [weak self] _ in
+        let editCountAction = UIAlertAction(title: Words.editTitle.value(), style: .default) { [weak self] _ in
             guard let editAlert = self?.createCountEditorAlert(for: productInBasket) else { return }
             self?.view?.showAlertController(alert: editAlert)
         }
         buyAction.setupTitleColor(.darkGray)
         editCountAction.setupTitleColor(.darkGray)
         
-        let menuAlert = AlertCreator.shared.createAlertWithCancel(title: "Select action for \(productName)", message:nil, style: .actionSheet, actions: [buyAction, editCountAction, deleteAction])
+        let menuAlert = AlertCreator.shared.createAlertWithCancel(title: "\(Words.selectActionFor.value()) \(productName)", message:nil, style: .actionSheet, actions: [buyAction, editCountAction, deleteAction])
         
         return menuAlert
         
@@ -66,12 +66,12 @@ class PurchasePresenter: NSObject {
     private func createCountEditorAlert(for productInBasket: ProductInBasket) -> UIAlertController {
         let measure = productInBasket.product?.measure ?? Measure.pcs.rawValue
         let currentCount = productInBasket.count
-        let alert = AlertCreator.shared.createAlertWithCancel(title: "Enter count, \(measure)", message: nil, style: .alert, actions: [])
+        let alert = AlertCreator.shared.createAlertWithCancel(title: "\(Words.enterCount.value()), \(measure)", message: nil, style: .alert, actions: [])
         alert.addTextField { countTF in
             countTF.text = "\(currentCount)"
             countTF.keyboardType = .decimalPad
         }
-        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
+        let saveAction = UIAlertAction(title: Words.saveTitle.value(), style: .default) { [weak self] _ in
             guard let text = alert.textFields?.first?.text,
                   let newValue = text.toDouble()
             else { return }
@@ -118,21 +118,21 @@ extension PurchasePresenter: PurchasePresenterProtocol {
     
     func addProductButtonPressed() {
         let productsSource = UIAlertAction(
-            title: "Products",
+            title: Words.productsTitle.value(),
             style: .default
         ) { _ in
             Coordinator.shared.goToProductsController()
         }
         productsSource.setupTitleColor(.darkGray)
         let productGroupsSource = UIAlertAction(
-            title: "Product groups",
+            title: Words.productGroupsTitle.value(),
             style: .default
         ) { _ in
             Coordinator.shared.goToProductGroupsController()
         }
         productGroupsSource.setupTitleColor(.darkGray)
         let sourceAlert = AlertCreator.shared.createAlertWithCancel(
-            title: "Source",
+            title: Words.sourceTitle.value(),
             message: nil,
             style: .actionSheet,
             actions: [productsSource, productGroupsSource])

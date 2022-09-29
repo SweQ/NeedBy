@@ -44,6 +44,7 @@ class GroupDetailsViewController: UIViewController {
 
 }
 
+//MARK: -UITableViewDelegate and DataSource
 extension GroupDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.getComponentsCount() ?? 0
@@ -61,7 +62,7 @@ extension GroupDetailsViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, _ in
+        let deleteAction = UIContextualAction(style: .destructive, title: Words.deleteTitle.value()) { [weak self] _, _, _ in
             self?.presenter?.removeProductFromGroup(with: indexPath)
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .bottom)
@@ -73,10 +74,12 @@ extension GroupDetailsViewController: UITableViewDelegate, UITableViewDataSource
     
 }
 
+//MARK: -GroupDetailsViewControllerProtocol
 extension GroupDetailsViewController: GroupDetailsViewControllerProtocol {
     
 }
 
+//MARK: -BasketViewControllerProtocol
 extension GroupDetailsViewController: BasketViewControllerProtocol {
     func addProductInBasket(productInBasket: ProductInBasket) {
         presenter?.addProductInBasket(productInBasket: productInBasket, tableView: detailsView.tableView)

@@ -45,7 +45,7 @@ class ProductGroupsCreatorView: UIView {
     private func setupAddComponentButton() {
         self.addSubview(addComponentButton)
         addComponentButton.translatesAutoresizingMaskIntoConstraints = false
-        addComponentButton.setTitle("Add component", for: .normal)
+        addComponentButton.setTitle(Words.addComponentTitle.value(), for: .normal)
         addComponentButton.backgroundColor = .black
         addComponentButton.isEnabled = true
         setupAddComponentButtonConstraints()
@@ -63,7 +63,7 @@ class ProductGroupsCreatorView: UIView {
     private func setupSaveButton() {
         self.addSubview(saveButton)
         saveButton.translatesAutoresizingMaskIntoConstraints = false
-        saveButton.setTitle("Save", for: .normal)
+        saveButton.setTitle(Words.saveTitle.value(), for: .normal)
         saveButton.backgroundColor = .black
         setupSaveButtonConstraints()
     }

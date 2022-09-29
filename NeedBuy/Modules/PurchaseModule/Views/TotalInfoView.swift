@@ -26,7 +26,7 @@ class TotalInfoView: UIView {
     private func setupTitleLabel() {
         addSubview(titleLabel)
         titleLabel.textAlignment = .left
-        titleLabel.text = "Total price:"
+        titleLabel.text = "\(Words.totalPriceTitle.value()):"
         titleLabel.applyTitleFont()
         setupTitleLabelAnchors()
     }

@@ -46,26 +46,23 @@ class PurchaseCreatorPresenter: NSObject {
     
     private func setupPurchaseTitle(title: String) {
         if title.isEmpty {
-            showIncorrectTitleAlert(with: "Purchase must has name.")
+            showIncorrectTitleAlert(with: Words.purchaseMustHasName.value())
         } else if !coreDataManager.isPurchaseTitleFree(title: title) {
-            showIncorrectTitleAlert(with: "This title already exists.")
+            showIncorrectTitleAlert(with: Words.titleIsExists.value())
         } else {
             purchaseTitle = title
         }
     }
     
     private func showIncorrectTitleAlert(with reason: String) {
-        let incorrectTitleAllert = AlertCreator.shared.createErrorAlert(with: "Title error!", message: reason) { [weak self] in
+        let incorrectTitleAllert = AlertCreator.shared.createErrorAlert(
+            with: Words.errorTitle.value(),
+            message: reason)
+        { [weak self] in
             self?.showPurchaseTitleAlert()
         }
         view?.showAlert(alert: incorrectTitleAllert)
     }
-    
-
-    
-
-    
-    
 }
 
 //MARK: -PurchaseCreatorPresenterProtocol
@@ -84,13 +81,18 @@ extension PurchaseCreatorPresenter: PurchaseCreatorPresenterProtocol {
     }
     
     func showPurchaseTitleAlert() {
-        let titleAlert = AlertCreator.shared.createAlertWithCancel(title: "Purchase name", message: nil, style: .alert, actions: []) {
+        let titleAlert = AlertCreator.shared.createAlertWithCancel(
+            title: Words.purchaseName.value(),
+            message: nil,
+            style: .alert,
+            actions: []) {
             Coordinator.shared.popViewController()
         }
         titleAlert.addTextField { textField in
-            textField.placeholder = "Enter purchase name..."
+            textField.placeholder = Words.enterPurchaseName.value()
         }
-        let okAction = UIAlertAction(title: "Ok", style: .default) { [weak self] _ in
+        let okAction = UIAlertAction(title: Words.okTitle.value(),
+                                     style: .default) { [weak self] _ in
             guard let purchaseName = titleAlert.textFields?.first?.text else { return }
             self?.setupPurchaseTitle(title: purchaseName)
         }
@@ -137,19 +139,19 @@ extension PurchaseCreatorPresenter: PurchaseCreatorPresenterProtocol {
     
     func addButtonPressed() {
         let productsSource = UIAlertAction(
-            title: "Products",
+            title: Words.productsTitle.value(),
             style: .default
         ) {[weak self] _ in
             self?.showProductsList()
         }
         let productGroupsSource = UIAlertAction(
-            title: "Product groups",
+            title: Words.productGroupsTitle.value(),
             style: .default
         ) { [weak self] _ in
             self?.showProductGroupsList()
         }
         let sourceAlert = AlertCreator.shared.createAlertWithCancel(
-            title: "Source",
+            title: Words.sourceTitle.value(),
             message: nil,
             style: .actionSheet,
             actions: [productsSource, productGroupsSource])

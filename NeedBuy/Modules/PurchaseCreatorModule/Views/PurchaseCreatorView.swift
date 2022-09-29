@@ -36,7 +36,7 @@ class PurchaseCreatorView: UIView {
         self.addSubview(createButton)
         
         createButton.setupStyleForPurchaseView(
-            with: "Create",
+            with: Words.createTitle.value(),
             textColor: .white
         )
         createButton.isHidden = true
@@ -58,7 +58,7 @@ class PurchaseCreatorView: UIView {
         self.addSubview(nextButton)
         
         nextButton.setupStyleForPurchaseView(
-            with: "Next",
+            with: Words.nextTitle.value(),
             textColor: .white
         )
         
@@ -82,7 +82,7 @@ class PurchaseCreatorView: UIView {
         backButton.translatesAutoresizingMaskIntoConstraints = false
         
         backButton.setupStyleForPurchaseView(
-            with: "Back",
+            with: Words.backTitle.value(),
             textColor: .white
         )
         

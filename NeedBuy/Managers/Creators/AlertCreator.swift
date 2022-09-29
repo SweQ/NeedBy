@@ -31,7 +31,9 @@ class AlertCreator: AlertCreatorProtocol {
             alertVC.addAction($0)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(
+            title: Words.cancelTitle.value(),
+            style: .cancel, handler: nil)
         cancelAction.setupTitleColor(.darkGray)
         alertVC.addAction(cancelAction)
         
@@ -50,7 +52,9 @@ class AlertCreator: AlertCreatorProtocol {
             alertVC.addAction($0)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+        let cancelAction = UIAlertAction(
+            title: Words.cancelTitle.value(),
+            style: .cancel) { _ in
             cancelHandler()
         }
         cancelAction.setupTitleColor(.darkGray)

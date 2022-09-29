@@ -21,7 +21,7 @@ class ProductsViewController: UIViewController {
     }
     
     private func setupBar() {
-        setupTitle(title: "Products")
+        setupTitle(title: Words.productsTitle.value())
     
         setupRightBarButtonItem(
             systemItem: .add,
@@ -41,7 +41,7 @@ class ProductsViewController: UIViewController {
         productsView.translatesAutoresizingMaskIntoConstraints = false
         productsView.setupAnchors(with: view)
         
-        productsView.tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: "productCell")
+        productsView.tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: ProductTableViewCell.identifier)
         productsView.tableView.delegate = self
         productsView.tableView.dataSource = self
     }
@@ -89,7 +89,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self ] action, view, complete in
+        let deleteAction = UIContextualAction(style: .destructive, title: Words.deleteTitle.value()) { [weak self ] action, view, complete in
             self?.presenter?.delete(at: indexPath)
             complete(true)
         }

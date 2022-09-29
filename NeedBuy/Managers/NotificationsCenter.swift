@@ -22,7 +22,7 @@ class NotificationsCenter{
             deleteNotification(with: date.shortStringDate())
         }
         authorization {
-            self.createNotification(with: date, message: "Today you have \(countPurchases) purchases.", countPurchases: countPurchases)
+            self.createNotification(with: date, message: "\(Words.todayYouHavePurchases.value()): \(countPurchases)", countPurchases: countPurchases)
         }
         
     }
@@ -58,7 +58,7 @@ class NotificationsCenter{
         if remainderCountPurchases > 0 {
             createNotification(
                 with: date,
-                message: "Today you have \(remainderCountPurchases) purchases.",
+                message: "\(Words.todayYouHavePurchases): \(remainderCountPurchases)",
                 countPurchases: remainderCountPurchases
             )
         }

@@ -19,7 +19,7 @@ class ChecksViewController: UIViewController {
     }
     
     private func setupBar() {
-        setupTitle(title: "Checks")
+        setupTitle(title: Words.checksTitle.value())
     }
     
     private func setupChecksView() {
@@ -76,7 +76,9 @@ extension ChecksViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, _ in
+        let deleteAction = UIContextualAction(style: .destructive,
+                                              title: Words.deleteTitle.value())
+        { [weak self] _, _, _ in
             self?.presenter?.deleteCheck(at: indexPath)
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
