@@ -64,7 +64,7 @@ class PurchasePresenter: NSObject {
     }
     
     private func createCountEditorAlert(for productInBasket: ProductInBasket) -> UIAlertController {
-        let measure = productInBasket.product?.measure ?? Measure.pcs.rawValue
+        let measure = productInBasket.product?.getMeasureString() ?? Measure.pcs.rawValue
         let currentCount = productInBasket.count
         let alert = AlertCreator.shared.createAlertWithCancel(title: "\(Words.enterCount.value()), \(measure)", message: nil, style: .alert, actions: [])
         alert.addTextField { countTF in

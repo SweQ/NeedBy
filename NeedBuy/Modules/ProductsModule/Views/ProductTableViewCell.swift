@@ -89,7 +89,7 @@ class ProductTableViewCell: UITableViewCell {
 
         let productName = product.name ?? "-"
         let productPrice = product.cost.shortString()
-        let productMeasure = product.measure ?? Measure.pcs.rawValue
+        let productMeasure = product.getMeasureString()
         productImageView.image = product.image
         nameLabel.text = productName
         costLabel.text = "\(Words.priceTitle.value()): \(productPrice) \(Words.per1.value()) \(productMeasure)"

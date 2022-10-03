@@ -12,4 +12,9 @@ import CoreData
 @objc(Product)
 public class Product: NSManagedObject {
 
+    func getMeasureString() -> String {
+        guard let measure = Measure(rawValue: measure ?? Measure.pcs.rawValue) else { return Measure.pcs.stringValue() }
+        
+        return measure.stringValue()
+    }
 }

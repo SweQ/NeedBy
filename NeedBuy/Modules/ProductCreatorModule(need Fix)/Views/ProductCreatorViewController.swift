@@ -14,6 +14,8 @@ class ProductCreatorViewController: UIViewController {
     let imagePickerVC = UIImagePickerController()
     var tapGesture: UITapGestureRecognizer!
     var tableView = UITableView()
+    
+    private var productMeasure = Measure.pcs
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,7 +113,7 @@ class ProductCreatorViewController: UIViewController {
     private func save() {
         
         let name = productCreatorView.nameTextField.text ?? ""
-        let measure = Measure.init(rawValue: productCreatorView.measureTextField.text ?? "") ?? Measure.pcs
+        let measure = productMeasure
         let cost = Double(productCreatorView.costTextField.text ?? "0") ?? 0
         
         let image = productCreatorView.productImageView.image
@@ -137,8 +139,9 @@ class ProductCreatorViewController: UIViewController {
         var actions: [UIAlertAction] = []
         for measure in Measure.allCases {
             let action = UIAlertAction(
-                title: measure.rawValue,
+                title: measure.stringValue(),
                 style: .default) { [weak self] action in
+                    self?.productMeasure = measure
                     self?.productCreatorView.measureTextField.text = action.title ?? ""
                     self?.productCreatorView.measureTextField.resignFirstResponder()
                 }
@@ -167,9 +170,11 @@ extension ProductCreatorViewController: ProductCreatorViewProtocol {
     func showEditingProduct(product: Product) {
         productCreatorView.nameTextField.text = product.name ?? ""
         productCreatorView.costTextField.text = "\(product.cost)"
-        productCreatorView.measureTextField.text = product.measure ?? ""
+        productCreatorView.measureTextField.text = product.getMeasureString()
         productCreatorView.productImageView.image = product.image
-        print(productCreatorView.productImageView.image?.imageOrientation == .up)
+        if let currentMeasure = product.measure {
+            productMeasure = Measure.init(rawValue: currentMeasure) ?? Measure.pcs
+        }
     }
     
     func showAlert(alert: UIAlertController) {

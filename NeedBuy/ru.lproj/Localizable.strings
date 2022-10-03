@@ -64,3 +64,6 @@
 "titleIsExists" = "Это наименование уже используется";
 "cancelTitle" = "Отмена";
 "todayYouHavePurchases" = "Сегодня у вас есть покупки";
+"liter" = "литр";
+"kg" = "кг";
+"pcs" = "шт";

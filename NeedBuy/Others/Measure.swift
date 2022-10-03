@@ -8,5 +8,11 @@
 import Foundation
 
 enum Measure: String, CaseIterable {
-    case kg, pcs, liter
+    case kg
+    case pcs
+    case liter
+    
+    func stringValue() -> String {
+        return self.rawValue.localize()
+    }
 }

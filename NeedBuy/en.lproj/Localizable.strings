@@ -64,3 +64,6 @@
 "titleIsExists" = "This title already exists";
 "cancelTitle" = "Cancel";
 "todayYouHavePurchases" = "Today you have purchases";
+"liter" = "liter";
+"kg" = "kg";
+"pcs" = "pcs";

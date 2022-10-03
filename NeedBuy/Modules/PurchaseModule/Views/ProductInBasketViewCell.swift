@@ -30,10 +30,11 @@ class ProductInBasketViewCell: UITableViewCell {
     
     private func fillLabels(with productInBasket: ProductInBasket) {
         guard let name = productInBasket.product?.name,
-              let measure = productInBasket.product?.measure
+              let measure = productInBasket.product?.getMeasureString()
         else { return }
         nameLabel.text = name
         costLabel.text = "\(Words.priceTitle.value()): \(productInBasket.getCost().shortString())"
+        
         countLabel.text = "\(productInBasket.count.shortString()) \(measure)"
     }
     

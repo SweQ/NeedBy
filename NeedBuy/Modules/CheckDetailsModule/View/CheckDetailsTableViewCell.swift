@@ -27,8 +27,8 @@ class CheckDetailsTableViewCell: UITableViewCell {
     }
     
     func config(with purchasedProduct: PurchasedProduct) {
-        guard let name = purchasedProduct.name,
-              let measure = purchasedProduct.measure else { return }
+        guard let name = purchasedProduct.name else { return }
+        let measure = purchasedProduct.getMeasureString()
         let count = purchasedProduct.count.shortString()
         let totalCost = purchasedProduct.totalCost.shortString()
         

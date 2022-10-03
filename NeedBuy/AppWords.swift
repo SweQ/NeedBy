@@ -66,6 +66,8 @@ enum Words: String {
     case titleIsExists
     case cancelTitle
     case todayYouHavePurchases
+    case liter
+    case kg
     
     func value() -> String {
         return self.rawValue.localize()

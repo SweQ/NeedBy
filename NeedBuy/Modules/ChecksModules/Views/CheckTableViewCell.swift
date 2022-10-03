@@ -30,7 +30,6 @@ class CheckTableViewCell: UITableViewCell {
     }
     
     private func setupDateLabelConstraints() {
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
         dateLabel.setupTotalConstraints(with: self, constant: 10)
     }
     
