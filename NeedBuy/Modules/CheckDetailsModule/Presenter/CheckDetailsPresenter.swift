@@ -33,7 +33,7 @@ extension CheckDetailsPresenter: CheckDetailsPresenterProtocol {
     
     func getCheckTitle() -> String {
         let checkDate = check?.date ?? "-"
-        return "Check from \(checkDate)"
+        return "\(Words.checkFrom.value()) \(checkDate)"
     }
     
     func getPurchaseProductsCount() -> Int {
