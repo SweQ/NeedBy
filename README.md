@@ -1,6 +1,6 @@
 # App NeedBy
 
-This app let you:
+This app lets you:
 - Create your products, includes:
    - Image of product
    - Unit of measure
@@ -10,7 +10,7 @@ This app let you:
 - Track history of your purchases
 ____
 This app stores data with CoreData, uses local notifications for reminder to the user about the planned purchase.
-App have 2 languages: English and Russian.
+App has 2 languages: English and Russian.
 ___
 ## Screenshots
 
